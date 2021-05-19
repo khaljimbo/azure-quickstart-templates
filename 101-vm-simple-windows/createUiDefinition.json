@@ -123,7 +123,7 @@
                             "required": true
                         },
                         "visible": true
-                    },                
+                    },
                     {
                         "name": "vmSize",
                         "type": "Microsoft.Compute.SizeSelector",
@@ -135,31 +135,6 @@
                         ],
                         "osPlatform": "Windows",
                         "count": "1"
-                    },
-                    {
-                        "name": "publicIpAddress",
-                        "type": "Microsoft.Network.PublicIpAddressCombo",
-                        "label": {
-                            "publicIpAddress": "Public IP Address for the VM",
-                            "domainNameLabel": "DNS Prefix for the public IP Address"
-                        },
-                        "toolTip": {
-                            "publicIpAddress": "Public IP Address for the VM",
-                            "domainNameLabel": "DNS Prefix for the public IP Address, must be globally unique"
-                        },
-                        "defaultValue": {
-                            "publicIpAddressName": "[concat(basics('vmName'), '-ip')]",
-                            "domainNameLabel": "[concat(basics('vmName'), '-', take(replace(guid(), '-', ''), 10))]"
-                        },
-                        "options": {
-                            "hideExisting": true,
-                            "hideNone": true
-                        },
-                        "constraints": {
-                            "required": {
-                                "domainNameLabel": true
-                            }
-                        }
                     }
                 ]
             }
@@ -171,7 +146,6 @@
             "adminPassword": "[basics('password')]",
             "vmSize": "[steps('VirtualMachineConfig').vmSize]",
             "OSVersion": "[steps('VirtualMachineConfig').OSVersion]",
-
             "publicIpName": "[steps('VirtualMachineConfig').publicIpAddress.name]",
             "dnsLabelPrefix": "[steps('VirtualMachineConfig').publicIpAddress.domainNameLabel]",
             "publicIPAllocationMethod": "[steps('VirtualMachineConfig').publicIpAddress.publicIPAllocationMethod]",
