@@ -147,6 +147,27 @@
                                 "location": "onBasics"
                             }
                         }
+                    },
+                    {
+                        "name": "element1",
+                        "type": "Microsoft.Common.OptionsGroup",
+                        "label": "Join VM to Domain",
+                        "defaultValue": "Value one",
+                        "toolTip": "",
+                        "constraints": {
+                            "allowedValues": [
+                                {
+                                    "label": "Value one",
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": "Value two",
+                                    "value": "No"
+                                }
+                            ],
+                            "required": true
+                        },
+                        "visible": true
                     }
                 ]
             },
