@@ -147,7 +147,7 @@
                         "type": "Microsoft.Common.TextBlock",
                         "visible": true,
                         "options": {
-                            "text": "There are two controls tailored towards gathering network requirements. They are the Public IP Address and Virtual Network combos seen below.",
+                            "text": "Select the Virtual Network and Subnet that you wish to use.",
                             "link": {
                                 "label": "",
                                 "uri": ""
@@ -177,26 +177,14 @@
                         },
                         "subnets": {
                             "subnet1": {
-                                "label": "First subnet",
+                                "label": "Subnet",
                                 "defaultValue": {
-                                    "name": "subnet-1",
+                                    "name": "",
                                     "addressPrefixSize": "/24"
                                 },
                                 "constraints": {
                                     "minAddressPrefixSize": "/24",
                                     "minAddressCount": 12,
-                                    "requireContiguousAddresses": true
-                                }
-                            },
-                            "subnet2": {
-                                "label": "Second subnet",
-                                "defaultValue": {
-                                    "name": "subnet-2",
-                                    "addressPrefixSize": "/26"
-                                },
-                                "constraints": {
-                                    "minAddressPrefixSize": "/26",
-                                    "minAddressCount": 8,
                                     "requireContiguousAddresses": true
                                 }
                             }
