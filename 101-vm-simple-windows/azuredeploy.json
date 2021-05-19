@@ -161,6 +161,18 @@
       "apiVersion": "2020-06-01",
       "name": "[parameters('vmName')]",
       "location": "[parameters('location')]",
+      "tags": {
+        "BusinessOwner": "",
+        "Entity": "",
+        "Environment": "",
+        "ProjectID": "",
+        "SupportedBy": "",
+        "ApplicationGroup": "",
+        "ApplicationName": "",
+        "ITOwner": "",
+        "SupportedFrom": "",
+        "CreatedOn": ""
+      },
       "dependsOn": [
         "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]",
         "[resourceId('Microsoft.Network/networkInterfaces', variables('nicName'))]"
