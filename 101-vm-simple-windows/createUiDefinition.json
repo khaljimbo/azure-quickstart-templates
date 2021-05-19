@@ -137,6 +137,19 @@
                         "count": "1"
                     }
                 ]
+            },
+            {
+                "name": "tags",
+                "label": "Tags",
+                "elements": [
+                    {
+                        "name": "tagsByResource",
+                        "type": "Microsoft.Common.TagsByResource",
+                        "resources": [
+                            "Microsoft.Compute/virtualMachines"
+                        ]
+                    }
+                ]
             }
         ],
         "outputs": {
