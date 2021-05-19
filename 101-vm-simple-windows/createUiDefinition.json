@@ -147,7 +147,19 @@
                         "type": "Microsoft.Common.TagsByResource",
                         "resources": [
                             "Microsoft.Compute/virtualMachines"
-                        ]
+                        ],
+                        "defaultValue": {
+                            "BusinessOwner": "",
+                            "Entity": "",
+                            "Environment": "",
+                            "ProjectID": "",
+                            "SupportedBy": "",
+                            "ApplicationGroup": "",
+                            "ApplicationName": "",
+                            "ITOwner": "",
+                            "SupportedFrom": "",
+                            "CreatedOn": ""
+                        }
                     }
                 ]
             }
