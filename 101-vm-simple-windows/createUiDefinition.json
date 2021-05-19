@@ -232,6 +232,45 @@
                             "hideConfirmation": true
                         },
                         "visible": "[equals(steps('VirtualMachineConfig').domainJoin, 'Yes')]"
+                    },
+                    {
+                        "name": "requireDNS",
+                        "type": "Microsoft.Common.OptionsGroup",
+                        "label": "Configure NIC DNS",
+                        "defaultValue": "Yes",
+                        "toolTip": "",
+                        "constraints": {
+                            "allowedValues": [
+                                {
+                                    "label": "Yes",
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": "No",
+                                    "value": "No"
+                                }
+                            ],
+                            "required": true
+                        },
+                        "visible": true
+                    },
+                    {
+                        "name": "customDns",
+                        "type": "Microsoft.Common.Section",
+                        "label": "Enter the IP(s) of the DNS Server(s)",
+                        "elements": [
+                            {
+                                "name": "DNS Server 1",
+                                "type": "Microsoft.Common.TextBox",
+                                "label": "DNS Server 1"
+                            },
+                            {
+                                "name": "DNS Server 2",
+                                "type": "Microsoft.Common.TextBox",
+                                "label": "DNS Server 2"
+                            }
+                        ],
+                        "visible": "[equals(steps('VirtualMachineConfig').requireDNS, 'Yes')]"
                     }
                 ]
             },
