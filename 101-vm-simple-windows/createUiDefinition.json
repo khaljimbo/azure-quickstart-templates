@@ -135,6 +135,18 @@
                         ],
                         "osPlatform": "Windows",
                         "count": "1"
+                    },
+                    {
+                        "name": "logAnalyticsSelector",
+                        "type": "Microsoft.Solutions.ResourceSelector",
+                        "label": "Select Log Analytics Accounts",
+                        "resourceType": "microsoft.operationalinsights/workspaces",
+                        "options": {
+                            "filter": {
+                                "subscription": "onBasics",
+                                "location": "onBasics"
+                            }
+                        }
                     }
                 ]
             },
