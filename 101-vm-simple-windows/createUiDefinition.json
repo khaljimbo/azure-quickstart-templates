@@ -149,23 +149,87 @@
                         }
                     },
                     {
-                        "name": "element1",
+                        "name": "domainJoin",
                         "type": "Microsoft.Common.OptionsGroup",
                         "label": "Join VM to Domain",
-                        "defaultValue": "Value one",
+                        "defaultValue": "Value two",
                         "toolTip": "",
                         "constraints": {
                             "allowedValues": [
                                 {
-                                    "label": "Value one",
-                                    "value": "Yes"
+                                    "label": "Yes",
+                                    "value": "one"
                                 },
                                 {
-                                    "label": "Value two",
-                                    "value": "No"
+                                    "label": "No",
+                                    "value": "two"
                                 }
                             ],
                             "required": true
+                        },
+                        "visible": true
+                    },
+                    {
+                        "name": "domainName",
+                        "type": "Microsoft.Common.TextBox",
+                        "label": "Domain Name",
+                        "defaultValue": "",
+                        "toolTip": "The name of domain you wish to join to",
+                        "placeholder": "",
+                        "multiLine": false,
+                        "constraints": {
+                            "required": false,
+                            "validations": [
+                                {
+                                    "regex": "^[a-z0-9A-Z]{1,30}$",
+                                    "message": "Only alphanumeric characters are allowed, and the value must be 1-30 characters long."
+                                },
+                                {
+                                    "isValid": "[startsWith(steps('resourceConfig').nameInstance, 'contoso')]",
+                                    "message": "Must start with 'contoso'."
+                                }
+                            ]
+                        },
+                        "visible": true
+                    },
+                    {
+                        "name": "domainUser",
+                        "type": "Microsoft.Common.TextBox",
+                        "label": "Domain Account",
+                        "defaultValue": "",
+                        "toolTip": "The account to use to join to the domain",
+                        "placeholder": "",
+                        "multiLine": false,
+                        "constraints": {
+                            "required": false,
+                            "validations": [
+                                {
+                                    "regex": "^[a-z0-9A-Z]{1,30}$",
+                                    "message": "Only alphanumeric characters are allowed, and the value must be 1-30 characters long."
+                                },
+                                {
+                                    "isValid": "[startsWith(steps('resourceConfig').nameInstance, 'contoso')]",
+                                    "message": "Must start with 'contoso'."
+                                }
+                            ]
+                        },
+                        "visible": true
+                    },
+                    {
+                        "name": "domainPassword",
+                        "type": "Microsoft.Common.PasswordBox",
+                        "label": {
+                            "password": "Domain Password",
+                            "confirmPassword": "Confirm Password"
+                        },
+                        "toolTip": "",
+                        "constraints": {
+                            "required": true,
+                            "regex": "^[a-zA-Z0-9]{8,}$",
+                            "validationMessage": "Password must be at least 8 characters long, contain only numbers and letters"
+                        },
+                        "options": {
+                            "hideConfirmation": true
                         },
                         "visible": true
                     }
