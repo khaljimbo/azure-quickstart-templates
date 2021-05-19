@@ -158,11 +158,11 @@
                             "allowedValues": [
                                 {
                                     "label": "Yes",
-                                    "value": "one"
+                                    "value": "true"
                                 },
                                 {
                                     "label": "No",
-                                    "value": "two"
+                                    "value": "false"
                                 }
                             ],
                             "required": true
@@ -190,7 +190,7 @@
                                 }
                             ]
                         },
-                        "visible": "[equals(steps('VirtualMachineConfig').domainJoin, 'Yes')]"
+                        "visible": "[equals(steps('VirtualMachineConfig').domainJoin, 'true')]"
                     },
                     {
                         "name": "domainUser",
@@ -213,7 +213,7 @@
                                 }
                             ]
                         },
-                        "visible": "[equals(steps('VirtualMachineConfig').domainJoin, 'Yes')]"
+                        "visible": "[equals(steps('VirtualMachineConfig').domainJoin, 'true')]"
                     },
                     {
                         "name": "domainPassword",
@@ -231,7 +231,7 @@
                         "options": {
                             "hideConfirmation": true
                         },
-                        "visible": "[equals(steps('VirtualMachineConfig').domainJoin, 'Yes')]"
+                        "visible": "[equals(steps('VirtualMachineConfig').domainJoin, 'true')]"
                     }
                 ]
             },
