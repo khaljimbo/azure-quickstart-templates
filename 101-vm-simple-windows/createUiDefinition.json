@@ -152,7 +152,7 @@
                         "name": "domainJoin",
                         "type": "Microsoft.Common.OptionsGroup",
                         "label": "Join VM to Domain",
-                        "defaultValue": "Value two",
+                        "defaultValue": "Yes",
                         "toolTip": "",
                         "constraints": {
                             "allowedValues": [
@@ -170,6 +170,7 @@
                         "visible": true
                     },
                     {
+                        "regex": "[coalesce(steps('VirtualMachineConfig').domainJoin, 'Yes')]",
                         "name": "domainName",
                         "type": "Microsoft.Common.TextBox",
                         "label": "Domain Name",
@@ -224,7 +225,7 @@
                         },
                         "toolTip": "",
                         "constraints": {
-                            "required": true,
+                            "required": false,
                             "regex": "^[a-zA-Z0-9]{8,}$",
                             "validationMessage": "Password must be at least 8 characters long, contain only numbers and letters"
                         },
