@@ -170,7 +170,6 @@
                         "visible": true
                     },
                     {
-                        "regex": "[coalesce(steps('VirtualMachineConfig').domainJoin, 'Yes')]",
                         "name": "domainName",
                         "type": "Microsoft.Common.TextBox",
                         "label": "Domain Name",
@@ -191,7 +190,7 @@
                                 }
                             ]
                         },
-                        "visible": true
+                        "visible": "[coalesce(steps('VirtualMachineConfig').domainJoin, 'Yes')]"
                     },
                     {
                         "name": "domainUser",
@@ -214,7 +213,7 @@
                                 }
                             ]
                         },
-                        "visible": true
+                        "visible": "[coalesce(steps('VirtualMachineConfig').domainJoin, 'Yes')]"
                     },
                     {
                         "name": "domainPassword",
@@ -232,7 +231,7 @@
                         "options": {
                             "hideConfirmation": true
                         },
-                        "visible": true
+                        "visible": "[coalesce(steps('VirtualMachineConfig').domainJoin, 'Yes')]"
                     }
                 ]
             },
