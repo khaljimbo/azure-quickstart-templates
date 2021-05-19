@@ -190,7 +190,7 @@
                                 }
                             ]
                         },
-                        "visible": "[coalesce(steps('VirtualMachineConfig').domainJoin, 'Yes')]"
+                        "visible": "[equals(steps('VirtualMachineConfig').domainJoin, 'Yes')]"
                     },
                     {
                         "name": "domainUser",
@@ -213,7 +213,7 @@
                                 }
                             ]
                         },
-                        "visible": "[coalesce(steps('VirtualMachineConfig').domainJoin, 'Yes')]"
+                        "visible": "[equals(steps('VirtualMachineConfig').domainJoin, 'Yes')]"
                     },
                     {
                         "name": "domainPassword",
@@ -231,7 +231,7 @@
                         "options": {
                             "hideConfirmation": true
                         },
-                        "visible": "[coalesce(steps('VirtualMachineConfig').domainJoin, 'Yes')]"
+                        "visible": "[equals(steps('VirtualMachineConfig').domainJoin, 'Yes')]"
                     }
                 ]
             },
